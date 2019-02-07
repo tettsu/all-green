@@ -2,6 +2,10 @@
 
 ## getting started
 
+* ``node server.js``
+
+* ``http://localhost:8888``
+
 ## version
 
 * nodejs@10.15.1
