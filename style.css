@@ -1,21 +1,26 @@
 @charset "UTF-8";
 
-
 tr {
 	border: solid 3px;
 	padding: 0.5em;
-	background-color:#e0e0e0;
+	background-color:#b8b8b8;
 	text-align: center;
 }
+
 th {
 	border: solid 2px;
 	padding: 0.5em;
-	background-color:#e0e0e0;
+	background-color:#b8b8b8;
 	text-align: center;
 }
+
 td {
 	border: solid 1px;
 	padding: 0.5em;
-	background-color:#e0e0e0;
+	background-color:#eeeeee;
 	text-align: center;
+}
+
+input[type="number"] {
+	width: 5em;
 }
