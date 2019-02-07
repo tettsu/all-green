@@ -1,15 +1,21 @@
 @charset "UTF-8";
 
-table {
-	border-collapse: collapse;
+
+tr {
+	border: solid 3px;
+	padding: 0.5em;
+	background-color:#e0e0e0;
+	text-align: center;
+}
+th {
+	border: solid 2px;
+	padding: 0.5em;
+	background-color:#e0e0e0;
+	text-align: center;
 }
 td {
 	border: solid 1px;
 	padding: 0.5em;
 	background-color:#e0e0e0;
-}
-body {
-	border: solid 1px;
-	padding: 0.5em;
-	background-color:#e0e0e0;
+	text-align: center;
 }

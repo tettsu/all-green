@@ -1,3 +1,3 @@
-function hello(){
-    alert("Hello!!");
+function welcome(){
+    alert("Welcome!");
   }
