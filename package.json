@@ -1,24 +1,21 @@
 {
-  "name": "maekawa-record",
+  "name": "all-green",
   "version": "1.0.0",
-  "description": "",
+  "description": "## getting started",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tettsu/maekawa-record.git"
+    "url": "git+https://github.com/tettsu/all-green.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/tettsu/maekawa-record/issues"
+    "url": "https://github.com/tettsu/all-green/issues"
   },
-  "homepage": "https://github.com/tettsu/maekawa-record#readme",
-  "dependencies": {
-    "ejs": "^2.6.1",
-    "express": "^4.16.4"
-  }
+  "homepage": "https://github.com/tettsu/all-green#readme"
 }
