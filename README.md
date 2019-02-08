@@ -1,4 +1,4 @@
-# maekawa-record
+# all-green
 
 ## getting started
 
