@@ -37,6 +37,16 @@ function calcMain(){
   // 各メンバーの30,50の計算と書き換え
   calcRate30();
   calcRate50();
+
+  // 各値のチェック
+  check1();
+  check2();
+  check3();
+  check4();
+  check5();
+  checkSum();
+  check30();
+  check50();
 }
 
 function calcAkagiPosi(){
@@ -121,6 +131,79 @@ function calcRate50(){
   dd50 = (parseFloat(ddPosiSum) - parseFloat(ddNegaSum)) * 50;
   var target = document.getElementById("50Dd");
   target.innerText = dd50;
+}
+
+function check1(){
+  var target = document.getElementById("check1");
+  if(akagiPosi1 + boshuPosi1 + chabaPosi1 + ddPosi1 === akagiNega1 + boshuNega1 + chabaNega1 + ddNega1){
+    target.innerText = "OK";
+  } else {
+    target.innerText = "NG";
+  }
+}
+
+function check2(){
+  var target = document.getElementById("check2");
+  if(akagiPosi2 + boshuPosi2 + chabaPosi2 + ddPosi2 === akagiNega2 + boshuNega2 + chabaNega2 + ddNega2){
+    target.innerText = "OK";
+  } else {
+    target.innerText = "NG";
+  }
+}
+
+function check3(){
+  var target = document.getElementById("check3");
+  if(akagiPosi3 + boshuPosi3 + chabaPosi3 + ddPosi3 === akagiNega3 + boshuNega3 + chabaNega3 + ddNega3){
+    target.innerText = "OK";
+  } else {
+    target.innerText = "NG";
+  }
+}
+
+function check4(){
+  var target = document.getElementById("check4");
+  if(akagiPosi4 + boshuPosi4 + chabaPosi4 + ddPosi4 === akagiNega4 + boshuNega4 + chabaNega4 + ddNega4){
+    target.innerText = "OK";
+  } else {
+    target.innerText = "NG";
+  }
+}
+
+function check5(){
+  var target = document.getElementById("check5");
+  if(akagiPosi5 + boshuPosi5 + chabaPosi5 + ddPosi5 === akagiNega5 + boshuNega5 + chabaNega5 + ddNega5){
+    target.innerText = "OK";
+  } else {
+    target.innerText = "NG";
+  }
+}
+
+function checkSum(){
+  var target = document.getElementById("checkSum");
+  if(akagiPosiSum + boshuPosiSum + chabaPosiSum + ddPosiSum 
+    === akagiNegaSum + boshuNegaSum + chabaNegaSum + ddNegaSum){
+    target.innerText = "OK";
+  } else {
+    target.innerText = "NG";
+  }
+}
+
+function check30(){
+  var target = document.getElementById("check30");
+  if(akagi30 + boshu30 + chaba30 + dd30 === 0){
+    target.innerText = "OK";
+  } else {
+    target.innerText = "NG";
+  }
+}
+
+function check50(){
+  var target = document.getElementById("check50");
+  if(akagi50 + boshu50 + chaba50 + dd50 === 0){
+    target.innerText = "OK";
+  } else {
+    target.innerText = "NG";
+  }
 }
 
 function getScores(){
