@@ -1,212 +1,215 @@
+// HTMLから取得したグローバル変数
+var akagiPosi1;
+var akagiPosi2;
+var akagiPosi3;
+var akagiPosi4;
+var akagiPosi5;
+var akagiNega1;
+var akagiNega2;
+var akagiNega3;
+var akagiNega4;
+var akagiNega5;
+var boshuPosi1;
+var boshuPosi2;
+var boshuPosi3;
+var boshuPosi4;
+var boshuPosi5;
+var boshuNega1;
+var boshuNega2;
+var boshuNega3;
+var boshuNega4;
+var boshuNega5;
+var chabaPosi1;
+var chabaPosi2;
+var chabaPosi3;
+var chabaPosi4;
+var chabaPosi5;
+var chabaNega1;
+var chabaNega2;
+var chabaNega3;
+var chabaNega4;
+var chabaNega5;
+var ddPosi1;
+var ddPosi2;
+var ddPosi3;
+var ddPosi4;
+var ddPosi5;
+var ddNega1;
+var ddNega2;
+var ddNega3;
+var ddNega4;
+var ddNega5;
+
+// +-の集計値
+var akagiPosiSum;
+var akagiNegaSum;
+var boshuPosiSum;
+var boshuNegaSum;
+var chabaPosiSum;
+var chabaNegaSum;
+var ddPosiSum;
+var ddNegaSum;
+
+// 30,50の集計値
+var akagi30;
+var boshu30;
+var chaba30;
+var dd30;
+var akagi50;
+var boshu50;
+var chaba50;
+var dd50;
+
 function calcMain(){
-  var akagiPosi1 = parseFloat(document.getElementById("1Akagi+").value|0);
-  var akagiPosi2 = parseFloat(document.getElementById("2Akagi+").value|0);
-  var akagiPosi3 = parseFloat(document.getElementById("3Akagi+").value|0);
-  var akagiPosi4 = parseFloat(document.getElementById("4Akagi+").value|0);
-  var akagiPosi5 = parseFloat(document.getElementById("5Akagi+").value|0);
-  var akagiNega1 = parseFloat(document.getElementById("1Akagi-").value|0);
-  var akagiNega2 = parseFloat(document.getElementById("2Akagi-").value|0);
-  var akagiNega3 = parseFloat(document.getElementById("3Akagi-").value|0);
-  var akagiNega4 = parseFloat(document.getElementById("4Akagi-").value|0);
-  var akagiNega5 = parseFloat(document.getElementById("5Akagi-").value|0);
-  var boshuPosi1 = parseFloat(document.getElementById("1Boshu+").value|0);
-  var boshuPosi2 = parseFloat(document.getElementById("2Boshu+").value|0);
-  var boshuPosi3 = parseFloat(document.getElementById("3Boshu+").value|0);
-  var boshuPosi4 = parseFloat(document.getElementById("4Boshu+").value|0);
-  var boshuPosi5 = parseFloat(document.getElementById("5Boshu+").value|0);
-  var boshuNega1 = parseFloat(document.getElementById("1Boshu-").value|0);
-  var boshuNega2 = parseFloat(document.getElementById("2Boshu-").value|0);
-  var boshuNega3 = parseFloat(document.getElementById("3Boshu-").value|0);
-  var boshuNega4 = parseFloat(document.getElementById("4Boshu-").value|0);
-  var boshuNega5 = parseFloat(document.getElementById("5Boshu-").value|0);
-  var chabaPosi1 = parseFloat(document.getElementById("1Chaba+").value|0);
-  var chabaPosi2 = parseFloat(document.getElementById("2Chaba+").value|0);
-  var chabaPosi3 = parseFloat(document.getElementById("3Chaba+").value|0);
-  var chabaPosi4 = parseFloat(document.getElementById("4Chaba+").value|0);
-  var chabaPosi5 = parseFloat(document.getElementById("5Chaba+").value|0);
-  var chabaNega1 = parseFloat(document.getElementById("1Chaba-").value|0);
-  var chabaNega2 = parseFloat(document.getElementById("2Chaba-").value|0);
-  var chabaNega3 = parseFloat(document.getElementById("3Chaba-").value|0);
-  var chabaNega4 = parseFloat(document.getElementById("4Chaba-").value|0);
-  var chabaNega5 = parseFloat(document.getElementById("5Chaba-").value|0);
-  var ddPosi1 = parseFloat(document.getElementById("1Dd+").value|0);
-  var ddPosi2 = parseFloat(document.getElementById("2Dd+").value|0);
-  var ddPosi3 = parseFloat(document.getElementById("3Dd+").value|0);
-  var ddPosi4 = parseFloat(document.getElementById("4Dd+").value|0);
-  var ddPosi5 = parseFloat(document.getElementById("5Dd+").value|0);
-  var ddNega1 = parseFloat(document.getElementById("1Dd-").value|0);
-  var ddNega2 = parseFloat(document.getElementById("2Dd-").value|0);
-  var ddNega3 = parseFloat(document.getElementById("3Dd-").value|0);
-  var ddNega4 = parseFloat(document.getElementById("4Dd-").value|0);
-  var ddNega5 = parseFloat(document.getElementById("5Dd-").value|0);
+  // HTMLから取得した値でグローバル変数を最新化
+  updateScores();
 
+  // 各メンバーの+-の計算とHTML書き換え
+  calcAkagiPosi();
+  calcAkagiNega();
+  calcBoshuPosi();
+  calcBoshuNega();
+  calcChabaPosi();
+  calcChabaNega();
+  calcDdPosi();
+  calcDdNega();
 
-  var apTotal = calcAkagiPosi();
-  var anTotal = calcAkagiNega();
-  var bpTotal = calcBoshuPosi();
-  var bnTotal = calcBoshuNega();
-  var cpTotal = calcChabaPosi();
-  var cnTotal = calcChabaNega();
-  var dpTotal = calcDdPosi();
-  var dnTotal = calcDdNega();
-
-  calcRate30(apTotal,anTotal,bpTotal,bnTotal,cpTotal,cnTotal,dpTotal,dnTotal);
-  calcRate50(apTotal,anTotal,bpTotal,bnTotal,cpTotal,cnTotal,dpTotal,dnTotal);
+  // 30,50の計算と書き換え
+  calcRate30();
+  calcRate50();
 }
 
-
-function calcRate30(apTotal,anTotal,bpTotal,bnTotal,cpTotal,cnTotal,dpTotal,dnTotal){
-  var aResult = parseFloat(apTotal) - parseFloat(anTotal);
-  aResult *= 30;
+function calcRate30(){
+  var akagiResult = parseFloat(akagiPosiSum) - parseFloat(akagiNegaSum);
+  akagiResult *= 30;
   var target = document.getElementById("30Akagi");
-  target.innerText = aResult;
+  target.innerText = akagiResult;
 
-  var bResult = parseFloat(bpTotal) - parseFloat(bnTotal);
-  bResult *= 30;
+  var boshuResult = parseFloat(boshuPosiSum) - parseFloat(boshuNegaSum);
+  boshuResult *= 30;
   var target = document.getElementById("30Boshu");
-  target.innerText = bResult;
+  target.innerText = boshuResult;
 
-  var cResult = parseFloat(cpTotal) - parseFloat(cnTotal);
-  cResult *= 30;
+  var chabaResult = parseFloat(chabaPosiSum) - parseFloat(chabaNegaSum);
+  chabaResult *= 30;
   var target = document.getElementById("30Chaba");
-  target.innerText = cResult;
+  target.innerText = chabaResult;
 
-  var dResult = parseFloat(dpTotal) - parseFloat(dnTotal);
-  dResult *= 30;
+  var ddResult = parseFloat(ddPosiSum) - parseFloat(ddNegaSum);
+  ddResult *= 30;
   var target = document.getElementById("30Dd");
-  target.innerText = dResult;
+  target.innerText = ddResult;
 }
 
-function calcRate50(apTotal,anTotal,bpTotal,bnTotal,cpTotal,cnTotal,dpTotal,dnTotal){
-  var aResult = parseFloat(apTotal) - parseFloat(anTotal);
-  aResult *= 50;
+function calcRate50(){
+  var akagiResult = parseFloat(akagiPosiSum) - parseFloat(akagiNegaSum);
+  akagiResult *= 50;
   var target = document.getElementById("50Akagi");
-  target.innerText = aResult;
+  target.innerText = akagiResult;
 
-  var bResult = parseFloat(bpTotal) - parseFloat(bnTotal);
-  bResult *= 50;
+  var boshuResult = parseFloat(boshuPosiSum) - parseFloat(boshuNegaSum);
+  boshuResult *= 50;
   var target = document.getElementById("50Boshu");
-  target.innerText = bResult;
+  target.innerText = boshuResult;
 
-  var cResult = parseFloat(cpTotal) - parseFloat(cnTotal);
-  cResult *= 50;
+  var chabaResult = parseFloat(chabaPosiSum) - parseFloat(chabaNegaSum);
+  chabaResult *= 50;
   var target = document.getElementById("50Chaba");
-  target.innerText = cResult;
+  target.innerText = chabaResult;
 
-  var dResult = parseFloat(dpTotal) - parseFloat(dnTotal);
-  dResult *= 50;
+  var ddResult = parseFloat(ddPosiSum) - parseFloat(ddNegaSum);
+  ddResult *= 50;
   var target = document.getElementById("50Dd");
-  target.innerText = dResult;
+  target.innerText = ddResult;
 }
 
 function calcAkagiPosi(){
-  var a1posi = parseFloat(document.getElementById("1Akagi+").value|0);
-  var a2posi = parseFloat(document.getElementById("2Akagi+").value|0);
-  var a3posi = parseFloat(document.getElementById("3Akagi+").value|0);
-  var a4posi = parseFloat(document.getElementById("4Akagi+").value|0);
-  var a5posi = parseFloat(document.getElementById("5Akagi+").value|0);
-  var result = a1posi + a2posi + a3posi + a4posi + a5posi;
-
+  akagiPosiSum = akagiPosi1 + akagiPosi2 + akagiPosi3 + akagiPosi4 + akagiPosi5;
   var target = document.getElementById("sumAkagi+");
-  target.innerText = result;
-
-  return result;
+  target.innerText = akagiPosiSum;
 }
 
 function calcAkagiNega(){
-  var a1nega = parseFloat(document.getElementById("1Akagi-").value|0);
-  var a2nega = parseFloat(document.getElementById("2Akagi-").value|0);
-  var a3nega = parseFloat(document.getElementById("3Akagi-").value|0);
-  var a4nega = parseFloat(document.getElementById("4Akagi-").value|0);
-  var a5nega = parseFloat(document.getElementById("5Akagi-").value|0);
-  var result = a1nega + a2nega + a3nega + a4nega + a5nega;
-
+  akagiNegaSum = akagiNega1 + akagiNega2 + akagiNega3 + akagiNega4 + akagiNega5;
   var target = document.getElementById("sumAkagi-");
-  target.innerText = result;
-
-  return result;
+  target.innerText = akagiNegaSum;
 }
 
 function calcBoshuPosi(){
-  var b1posi = parseFloat(document.getElementById("1Boshu+").value|0);
-  var b2posi = parseFloat(document.getElementById("2Boshu+").value|0);
-  var b3posi = parseFloat(document.getElementById("3Boshu+").value|0);
-  var b4posi = parseFloat(document.getElementById("4Boshu+").value|0);
-  var b5posi = parseFloat(document.getElementById("5Boshu+").value|0);
-  var result = b1posi + b2posi + b3posi + b4posi + b5posi;
-
+  boshuPosiSum = boshuPosi1 + boshuPosi2 + boshuPosi3 + boshuPosi4 + boshuPosi5;
   var target = document.getElementById("sumBoshu+");
-  target.innerText = result;
-
-  return result;
+  target.innerText = boshuPosiSum;
 }
 
 function calcBoshuNega(){
-  var b1nega = parseFloat(document.getElementById("1Boshu-").value|0);
-  var b2nega = parseFloat(document.getElementById("2Boshu-").value|0);
-  var b3nega = parseFloat(document.getElementById("3Boshu-").value|0);
-  var b4nega = parseFloat(document.getElementById("4Boshu-").value|0);
-  var b5nega = parseFloat(document.getElementById("5Boshu-").value|0);
-  var result = b1nega + b2nega + b3nega + b4nega + b5nega;
-
+  boshuNegaSum = boshuNega1 + boshuNega2 + boshuNega3 + boshuNega4 + boshuNega5;
   var target = document.getElementById("sumBoshu-");
-  target.innerText = result;
-
-  return result;
+  target.innerText = boshuNegaSum;
 }
 
 function calcChabaPosi(){
-  var c1posi = parseFloat(document.getElementById("1Chaba+").value|0);
-  var c2posi = parseFloat(document.getElementById("2Chaba+").value|0);
-  var c3posi = parseFloat(document.getElementById("3Chaba+").value|0);
-  var c4posi = parseFloat(document.getElementById("4Chaba+").value|0);
-  var c5posi = parseFloat(document.getElementById("5Chaba+").value|0);
-  var result = c1posi + c2posi + c3posi + c4posi + c5posi;
-
+  chabaPosiSum = chabaPosi1 + chabaPosi2 + chabaPosi3 + chabaPosi4 + chabaPosi5;
   var target = document.getElementById("sumChaba+");
-  target.innerText = result;
-
-  return result;
+  target.innerText = chabaPosiSum;
 }
 
 function calcChabaNega(){
-  var c1nega = parseFloat(document.getElementById("1Chaba-").value|0);
-  var c2nega = parseFloat(document.getElementById("2Chaba-").value|0);
-  var c3nega = parseFloat(document.getElementById("3Chaba-").value|0);
-  var c4nega = parseFloat(document.getElementById("4Chaba-").value|0);
-  var c5nega = parseFloat(document.getElementById("5Chaba-").value|0);
-  var result = c1nega + c2nega + c3nega + c4nega + c5nega;
-
+  chabaNegaSum = chabaNega1 + chabaNega2 + chabaNega3 + chabaNega4 + chabaNega5;
   var target = document.getElementById("sumChaba-");
-  target.innerText = result;
-
-  return result;
+  target.innerText = chabaNegaSum;
 }
 
 function calcDdPosi(){
-  var d1posi = parseFloat(document.getElementById("1Dd+").value|0);
-  var d2posi = parseFloat(document.getElementById("2Dd+").value|0);
-  var d3posi = parseFloat(document.getElementById("3Dd+").value|0);
-  var d4posi = parseFloat(document.getElementById("4Dd+").value|0);
-  var d5posi = parseFloat(document.getElementById("5Dd+").value|0);
-  var result = d1posi + d2posi + d3posi + d4posi + d5posi;
-
+  ddPosiSum = ddPosi1 + ddPosi2 + ddPosi3 + ddPosi4 + ddPosi5;
   var target = document.getElementById("sumDd+");
-  target.innerText = result;
-
-  return result;}
-
-  function calcDdNega(){
-  var d1nega = parseFloat(document.getElementById("1Dd-").value|0);
-  var d2nega = parseFloat(document.getElementById("2Dd-").value|0);
-  var d3nega = parseFloat(document.getElementById("3Dd-").value|0);
-  var d4nega = parseFloat(document.getElementById("4Dd-").value|0);
-  var d5nega = parseFloat(document.getElementById("5Dd-").value|0);
-  var result = d1nega + d2nega + d3nega + d4nega + d5nega;
-
-  var target = document.getElementById("sumDd-");
-  target.innerText = result;
-
-  return result;
+  target.innerText = ddPosiSum;
 }
 
+function calcDdNega(){
+  ddNegaSum = ddNega1 + ddNega2 + ddNega3 + ddNega4 + ddNega5;
+  var target = document.getElementById("sumDd-");
+  target.innerText = ddNegaSum;
+}
+
+function updateScores(){
+  akagiPosi1 = parseFloat(document.getElementById("1Akagi+").value|0);
+  akagiPosi2 = parseFloat(document.getElementById("2Akagi+").value|0);
+  akagiPosi3 = parseFloat(document.getElementById("3Akagi+").value|0);
+  akagiPosi4 = parseFloat(document.getElementById("4Akagi+").value|0);
+  akagiPosi5 = parseFloat(document.getElementById("5Akagi+").value|0);
+  akagiNega1 = parseFloat(document.getElementById("1Akagi-").value|0);
+  akagiNega2 = parseFloat(document.getElementById("2Akagi-").value|0);
+  akagiNega3 = parseFloat(document.getElementById("3Akagi-").value|0);
+  akagiNega4 = parseFloat(document.getElementById("4Akagi-").value|0);
+  akagiNega5 = parseFloat(document.getElementById("5Akagi-").value|0);
+  boshuPosi1 = parseFloat(document.getElementById("1Boshu+").value|0);
+  boshuPosi2 = parseFloat(document.getElementById("2Boshu+").value|0);
+  boshuPosi3 = parseFloat(document.getElementById("3Boshu+").value|0);
+  boshuPosi4 = parseFloat(document.getElementById("4Boshu+").value|0);
+  boshuPosi5 = parseFloat(document.getElementById("5Boshu+").value|0);
+  boshuNega1 = parseFloat(document.getElementById("1Boshu-").value|0);
+  boshuNega2 = parseFloat(document.getElementById("2Boshu-").value|0);
+  boshuNega3 = parseFloat(document.getElementById("3Boshu-").value|0);
+  boshuNega4 = parseFloat(document.getElementById("4Boshu-").value|0);
+  boshuNega5 = parseFloat(document.getElementById("5Boshu-").value|0);
+  chabaPosi1 = parseFloat(document.getElementById("1Chaba+").value|0);
+  chabaPosi2 = parseFloat(document.getElementById("2Chaba+").value|0);
+  chabaPosi3 = parseFloat(document.getElementById("3Chaba+").value|0);
+  chabaPosi4 = parseFloat(document.getElementById("4Chaba+").value|0);
+  chabaPosi5 = parseFloat(document.getElementById("5Chaba+").value|0);
+  chabaNega1 = parseFloat(document.getElementById("1Chaba-").value|0);
+  chabaNega2 = parseFloat(document.getElementById("2Chaba-").value|0);
+  chabaNega3 = parseFloat(document.getElementById("3Chaba-").value|0);
+  chabaNega4 = parseFloat(document.getElementById("4Chaba-").value|0);
+  chabaNega5 = parseFloat(document.getElementById("5Chaba-").value|0);
+  ddPosi1 = parseFloat(document.getElementById("1Dd+").value|0);
+  ddPosi2 = parseFloat(document.getElementById("2Dd+").value|0);
+  ddPosi3 = parseFloat(document.getElementById("3Dd+").value|0);
+  ddPosi4 = parseFloat(document.getElementById("4Dd+").value|0);
+  ddPosi5 = parseFloat(document.getElementById("5Dd+").value|0);
+  ddNega1 = parseFloat(document.getElementById("1Dd-").value|0);
+  ddNega2 = parseFloat(document.getElementById("2Dd-").value|0);
+  ddNega3 = parseFloat(document.getElementById("3Dd-").value|0);
+  ddNega4 = parseFloat(document.getElementById("4Dd-").value|0);
+  ddNega5 = parseFloat(document.getElementById("5Dd-").value|0);
+}
