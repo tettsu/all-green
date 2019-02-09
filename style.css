@@ -28,3 +28,27 @@ input[type="number"] {
 input[type="text"] {
 	width: 5em;
 }
+
+th[id="positiveHeader"] {
+	background-color: royalblue;
+}
+
+th[id="negativeHeader"] {
+	background-color: maroon;
+}
+
+td[id="positiveScore"] {
+	background-color: aqua;
+}
+
+td[id="negativeScore"] {
+	background-color: salmon;
+}
+
+th[id="positiveFooter"] {
+	background-color: royalblue;
+}
+
+th[id="negativeFooter"] {
+	background-color: maroon;
+}
