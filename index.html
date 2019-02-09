@@ -8,109 +8,118 @@
       <title>all-green</title>
   </head>
 
-  <body onload="testMessage()">
+  <body>
     <h1>all-green</h1>
     
     <table>
       <!--header-->
       <tr>
-        <th>name</th><th colspan="2">memberA</th><th colspan="2">memberB</th><th colspan="2">memberC</th><th colspan="2">memberD</th><th rowspan="2">check</th>
+        <th>name</th>
+        <th colspan="2">memberA</th>
+        <th colspan="2">memberB</th>
+        <th colspan="2">memberC</th>
+        <th colspan="2">memberD</th>
+        <th rowspan="2">check</th>
       </tr>
       <tr>
-        <th>round</th><th>+</th><th>-</th><th>+</th><th>-</th><th>+</th><th>-</th><th>+</th><th>-</th>
+        <th>round</th>
+        <th>+</th><th>-</th>
+        <th>+</th><th>-</th>
+        <th>+</th><th>-</th>
+        <th>+</th><th>-</th>
       </tr>
 
       <!--score-->
       <tr>
         <th>1</th>
-        <td><input type="number" id="a1posi" placeholder="0"></td>
-        <td><input type="number" id="a1nega" placeholder="0"></td>
-        <td><input type="number" id="b1posi" placeholder="0"></td>
-        <td><input type="number" id="b1nega" placeholder="0"></td>
-        <td><input type="number" id="c1posi" placeholder="0"></td>
-        <td><input type="number" id="c1nega" placeholder="0"></td>
-        <td><input type="number" id="d1posi" placeholder="0"></td>
-        <td><input type="number" id="d1nega" placeholder="0"></td>
+        <td><input type="number" id="1Akagi+" placeholder="0"></td>
+        <td><input type="number" id="1Akagi-" placeholder="0"></td>
+        <td><input type="number" id="1Boshu+" placeholder="0"></td>
+        <td><input type="number" id="1Boshu-" placeholder="0"></td>
+        <td><input type="number" id="1Chaba+" placeholder="0"></td>
+        <td><input type="number" id="1Chaba-" placeholder="0"></td>
+        <td><input type="number" id="1Dd+" placeholder="0"></td>
+        <td><input type="number" id="1Dd-" placeholder="0"></td>
         <th>-</th>
       </tr>
       <tr>
         <th>2</th>
-        <td><input type="number" id="a2posi" placeholder="0"></td>
-        <td><input type="number" id="a2nega" placeholder="0"></td>
-        <td><input type="number" id="b2posi" placeholder="0"></td>
-        <td><input type="number" id="b2nega" placeholder="0"></td>
-        <td><input type="number" id="c2posi" placeholder="0"></td>
-        <td><input type="number" id="c2nega" placeholder="0"></td>
-        <td><input type="number" id="d2posi" placeholder="0"></td>
-        <td><input type="number" id="d2nega" placeholder="0"></td>
+        <td><input type="number" id="2Akagi+" placeholder="0"></td>
+        <td><input type="number" id="2Akagi-" placeholder="0"></td>
+        <td><input type="number" id="2Boshu+" placeholder="0"></td>
+        <td><input type="number" id="2Boshu-" placeholder="0"></td>
+        <td><input type="number" id="2Chaba+" placeholder="0"></td>
+        <td><input type="number" id="2Chaba-" placeholder="0"></td>
+        <td><input type="number" id="2Dd+" placeholder="0"></td>
+        <td><input type="number" id="2Dd-" placeholder="0"></td>
         <th>-</th>
       </tr>
       <tr>
         <th>3</th>
-        <td><input type="number" id="a3posi" placeholder="0"></td>
-        <td><input type="number" id="a3nega" placeholder="0"></td>
-        <td><input type="number" id="b3posi" placeholder="0"></td>
-        <td><input type="number" id="b3nega" placeholder="0"></td>
-        <td><input type="number" id="c3posi" placeholder="0"></td>
-        <td><input type="number" id="c3nega" placeholder="0"></td>
-        <td><input type="number" id="d3posi" placeholder="0"></td>
-        <td><input type="number" id="d3nega" placeholder="0"></td>
+        <td><input type="number" id="3Akagi+" placeholder="0"></td>
+        <td><input type="number" id="3Akagi-" placeholder="0"></td>
+        <td><input type="number" id="3Boshu+" placeholder="0"></td>
+        <td><input type="number" id="3Boshu-" placeholder="0"></td>
+        <td><input type="number" id="3Chaba+" placeholder="0"></td>
+        <td><input type="number" id="3Chaba-" placeholder="0"></td>
+        <td><input type="number" id="3Dd+" placeholder="0"></td>
+        <td><input type="number" id="3Dd-" placeholder="0"></td>
         <th>-</th>
       </tr>
       <tr>
         <th>4</th>
-        <td><input type="number" id="a4posi" placeholder="0"></td>
-        <td><input type="number" id="a4nega" placeholder="0"></td>
-        <td><input type="number" id="b4posi" placeholder="0"></td>
-        <td><input type="number" id="b4nega" placeholder="0"></td>
-        <td><input type="number" id="c4posi" placeholder="0"></td>
-        <td><input type="number" id="c4nega" placeholder="0"></td>
-        <td><input type="number" id="d4posi" placeholder="0"></td>
-        <td><input type="number" id="d4nega" placeholder="0"></td>
+        <td><input type="number" id="4Akagi+" placeholder="0"></td>
+        <td><input type="number" id="4Akagi-" placeholder="0"></td>
+        <td><input type="number" id="4Boshu+" placeholder="0"></td>
+        <td><input type="number" id="4Boshu-" placeholder="0"></td>
+        <td><input type="number" id="4Chaba+" placeholder="0"></td>
+        <td><input type="number" id="4Chaba-" placeholder="0"></td>
+        <td><input type="number" id="4Dd+" placeholder="0"></td>
+        <td><input type="number" id="4Dd-" placeholder="0"></td>
         <th>-</th>
       </tr>
       <tr>
         <th>5</th>
-        <td><input type="number" id="a5posi" placeholder="0"></td>
-        <td><input type="number" id="a5nega" placeholder="0"></td>
-        <td><input type="number" id="b5posi" placeholder="0"></td>
-        <td><input type="number" id="b5nega" placeholder="0"></td>
-        <td><input type="number" id="c5posi" placeholder="0"></td>
-        <td><input type="number" id="c5nega" placeholder="0"></td>
-        <td><input type="number" id="d5posi" placeholder="0"></td>
-        <td><input type="number" id="d5nega" placeholder="0"></td>
+        <td><input type="number" id="5Akagi+" placeholder="0"></td>
+        <td><input type="number" id="5Akagi-" placeholder="0"></td>
+        <td><input type="number" id="5Boshu+" placeholder="0"></td>
+        <td><input type="number" id="5Boshu-" placeholder="0"></td>
+        <td><input type="number" id="5Chaba+" placeholder="0"></td>
+        <td><input type="number" id="5Chaba-" placeholder="0"></td>
+        <td><input type="number" id="5Dd+" placeholder="0"></td>
+        <td><input type="number" id="5Dd-" placeholder="0"></td>
         <th>-</th>
       </tr>
 
       <!--total-->
       <tr>
         <th>total</th>        
-        <th><div id="apTotal">0</div></th>
-        <th><div id="anTotal">0</div></th>
-        <th><div id="bpTotal">0</div></th>
-        <th><div id="bnTotal">0</div></th>
-        <th><div id="cpTotal">0</div></th>
-        <th><div id="cnTotal">0</div></th>
-        <th><div id="dpTotal">0</div></th>
-        <th><div id="dnTotal">0</div></th>
+        <th><div id="sumAkagi+">0</div></th>
+        <th><div id="sumAkagi-">0</div></th>
+        <th><div id="sumBoshu+">0</div></th>
+        <th><div id="sumBoshu-">0</div></th>
+        <th><div id="sumChaba+">0</div></th>
+        <th><div id="sumChaba-">0</div></th>
+        <th><div id="sumDd+">0</div></th>
+        <th><div id="sumDd-">0</div></th>
         <th>-</th>
       </tr>
 
       <!--rating-->
       <tr>
         <th>30yen</th>
-        <th colspan="2"><div id="a30Total">0</div></th>
-        <th colspan="2"><div id="b30Total">0</div></th>
-        <th colspan="2"><div id="c30Total">0</div></th>
-        <th colspan="2"><div id="d30Total">0</div></th>
+        <th colspan="2"><div id="30Akagi">0</div></th>
+        <th colspan="2"><div id="30Boshu">0</div></th>
+        <th colspan="2"><div id="30Chaba">0</div></th>
+        <th colspan="2"><div id="30Dd">0</div></th>
         <th>-</th>
       </tr>
       <tr>
         <th>50yen</th>
-        <th colspan="2"><div id="a50Total">0</div></th>
-        <th colspan="2"><div id="b50Total">0</div></th>
-        <th colspan="2"><div id="c50Total">0</div></th>
-        <th colspan="2"><div id="d50Total">0</div></th>
+        <th colspan="2"><div id="50Akagi">0</div></th>
+        <th colspan="2"><div id="50Boshu">0</div></th>
+        <th colspan="2"><div id="50Chaba">0</div></th>
+        <th colspan="2"><div id="50Dd">0</div></th>
         <th>-</th>
       </tr>
 
