@@ -1,4 +1,4 @@
-function welcome(){
+function testMessage(){
     alert("Welcome,Maekawa!");
   }
 
