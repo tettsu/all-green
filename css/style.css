@@ -1,24 +1,15 @@
 @charset "UTF-8";
 
 tr {
-	border: solid 3px;
-	padding: 0.5em;
-	background-color:#b8b8b8;
-	text-align: center;
+	border: solid 1px;
 }
 
 th {
-	border: solid 2px;
-	padding: 0.5em;
-	background-color:#b8b8b8;
-	text-align: center;
+	border: solid 1px;
 }
 
 td {
 	border: solid 1px;
-	padding: 0.5em;
-	background-color:#eeeeee;
-	text-align: center;
 }
 
 input[type="number"] {
@@ -30,25 +21,17 @@ input[type="text"] {
 }
 
 th[id="positiveHeader"] {
-	background-color: royalblue;
-}
-
-th[id="negativeHeader"] {
-	background-color: maroon;
-}
-
-td[id="positiveScore"] {
 	background-color: aqua;
 }
 
-td[id="negativeScore"] {
+th[id="negativeHeader"] {
 	background-color: salmon;
 }
 
 th[id="positiveFooter"] {
-	background-color: royalblue;
+	background-color: aqua;
 }
 
 th[id="negativeFooter"] {
-	background-color: maroon;
+	background-color: salmon;
 }

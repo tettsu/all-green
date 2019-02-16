@@ -2,8 +2,8 @@
 <html>
 
   <head>
-      <!-- <link rel="stylesheet" type="text/css" href="css/style.css"/> -->
       <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projecticon">
+      <link rel="stylesheet" type="text/css" href="css/style.css"/>
       <script src="js/materialize.js"></script>
       <script type="text/javascript" src="js/index.js"></script>
       <meta http-equiv="content-type" charset="utf-8">
@@ -11,7 +11,6 @@
   </head>
 
   <body>
-    <!-- <h1>all-green</h1> -->
     <nav>
       <div class="nav-wrapper">
         <a href="#" class="brand-logo">all-green</a>
@@ -20,125 +19,129 @@
       </div>
     </nav>
     
-    <table>
+    <table class="striped centered">
       <!--header-->
-      <tr>
-        <th>name</th>
-        <th colspan="2">memberA</th>
-        <th colspan="2">memberB</th>
-        <th colspan="2">memberC</th>
-        <th colspan="2">memberD</th>
-        <th rowspan="2">check</th>
-      </tr>
-      <tr>
-        <th>round</th>
-        <th id="positiveHeader">+</th><th id="negativeHeader">-</th>
-        <th id="positiveHeader">+</th><th id="negativeHeader">-</th>
-        <th id="positiveHeader">+</th><th id="negativeHeader">-</th>
-        <th id="positiveHeader">+</th><th id="negativeHeader">-</th>
-      </tr>
+      <thead>
+        <tr>
+          <th>name</th>
+          <th colspan="2">memberA</th>
+          <th colspan="2">memberB</th>
+          <th colspan="2">memberC</th>
+          <th colspan="2">memberD</th>
+          <th rowspan="2">check</th>
+        </tr>
+        <tr>
+          <th>round</th>
+          <th id="positiveHeader">+</th><th id="negativeHeader">-</th>
+          <th id="positiveHeader">+</th><th id="negativeHeader">-</th>
+          <th id="positiveHeader">+</th><th id="negativeHeader">-</th>
+          <th id="positiveHeader">+</th><th id="negativeHeader">-</th>
+        </tr>
+      <thead>
 
       <!--score-->
-      <tr>
-        <th>1</th>
-        <td id="positiveScore"><input type="number" id="1Akagi+" placeholder="0"></td>
-        <td id="negativeScore"><input type="number" id="1Akagi-" placeholder="0"></td>
-        <td id="positiveScore"><input type="number" id="1Boshu+" placeholder="0"></td>
-        <td id="negativeScore"><input type="number" id="1Boshu-" placeholder="0"></td>
-        <td id="positiveScore"><input type="number" id="1Chaba+" placeholder="0"></td>
-        <td id="negativeScore"><input type="number" id="1Chaba-" placeholder="0"></td>
-        <td id="positiveScore"><input type="number" id="1Dd+" placeholder="0"></td>
-        <td id="negativeScore"><input type="number" id="1Dd-" placeholder="0"></td>
-        <th><div id="check1">-</div></th>
-      </tr>
-      <tr>
-        <th>2</th>
-        <td id="positiveScore"><input type="number" id="2Akagi+" placeholder="0"></td>
-        <td id="negativeScore"><input type="number" id="2Akagi-" placeholder="0"></td>
-        <td id="positiveScore"><input type="number" id="2Boshu+" placeholder="0"></td>
-        <td id="negativeScore"><input type="number" id="2Boshu-" placeholder="0"></td>
-        <td id="positiveScore"><input type="number" id="2Chaba+" placeholder="0"></td>
-        <td id="negativeScore"><input type="number" id="2Chaba-" placeholder="0"></td>
-        <td id="positiveScore"><input type="number" id="2Dd+" placeholder="0"></td>
-        <td id="negativeScore"><input type="number" id="2Dd-" placeholder="0"></td>
-        <th><div id="check2">-</div></th>
-      </tr>
-      <tr>
-        <th>3</th>
-        <td id="positiveScore"><input type="number" id="3Akagi+" placeholder="0"></td>
-        <td id="negativeScore"><input type="number" id="3Akagi-" placeholder="0"></td>
-        <td id="positiveScore"><input type="number" id="3Boshu+" placeholder="0"></td>
-        <td id="negativeScore"><input type="number" id="3Boshu-" placeholder="0"></td>
-        <td id="positiveScore"><input type="number" id="3Chaba+" placeholder="0"></td>
-        <td id="negativeScore"><input type="number" id="3Chaba-" placeholder="0"></td>
-        <td id="positiveScore"><input type="number" id="3Dd+" placeholder="0"></td>
-        <td id="negativeScore"><input type="number" id="3Dd-" placeholder="0"></td>
-        <th><div id="check3">-</div></th>
-      </tr>
-      <tr>
-        <th>4</th>
-        <td id="positiveScore"><input type="number" id="4Akagi+" placeholder="0"></td>
-        <td id="negativeScore"><input type="number" id="4Akagi-" placeholder="0"></td>
-        <td id="positiveScore"><input type="number" id="4Boshu+" placeholder="0"></td>
-        <td id="negativeScore"><input type="number" id="4Boshu-" placeholder="0"></td>
-        <td id="positiveScore"><input type="number" id="4Chaba+" placeholder="0"></td>
-        <td id="negativeScore"><input type="number" id="4Chaba-" placeholder="0"></td>
-        <td id="positiveScore"><input type="number" id="4Dd+" placeholder="0"></td>
-        <td id="negativeScore"><input type="number" id="4Dd-" placeholder="0"></td>
-        <th><div id="check4">-</div></th>
-      </tr>
-      <tr>
-        <th>5</th>
-        <td id="positiveScore"><input type="number" id="5Akagi+" placeholder="0"></td>
-        <td id="negativeScore"><input type="number" id="5Akagi-" placeholder="0"></td>
-        <td id="positiveScore"><input type="number" id="5Boshu+" placeholder="0"></td>
-        <td id="negativeScore"><input type="number" id="5Boshu-" placeholder="0"></td>
-        <td id="positiveScore"><input type="number" id="5Chaba+" placeholder="0"></td>
-        <td id="negativeScore"><input type="number" id="5Chaba-" placeholder="0"></td>
-        <td id="positiveScore"><input type="number" id="5Dd+" placeholder="0"></td>
-        <td id="negativeScore"><input type="number" id="5Dd-" placeholder="0"></td>
-        <th><div id="check5">-</div></th>
-      </tr>
+      <tbody>
+        <tr>
+          <th>1</th>
+          <td id="positiveScore"><input type="number" id="1Akagi+" placeholder="0"></td>
+          <td id="negativeScore"><input type="number" id="1Akagi-" placeholder="0"></td>
+          <td id="positiveScore"><input type="number" id="1Boshu+" placeholder="0"></td>
+          <td id="negativeScore"><input type="number" id="1Boshu-" placeholder="0"></td>
+          <td id="positiveScore"><input type="number" id="1Chaba+" placeholder="0"></td>
+          <td id="negativeScore"><input type="number" id="1Chaba-" placeholder="0"></td>
+          <td id="positiveScore"><input type="number" id="1Dd+" placeholder="0"></td>
+          <td id="negativeScore"><input type="number" id="1Dd-" placeholder="0"></td>
+          <th><div id="check1">-</div></th>
+        </tr>
+        <tr>
+          <th>2</th>
+          <td id="positiveScore"><input type="number" id="2Akagi+" placeholder="0"></td>
+          <td id="negativeScore"><input type="number" id="2Akagi-" placeholder="0"></td>
+          <td id="positiveScore"><input type="number" id="2Boshu+" placeholder="0"></td>
+          <td id="negativeScore"><input type="number" id="2Boshu-" placeholder="0"></td>
+          <td id="positiveScore"><input type="number" id="2Chaba+" placeholder="0"></td>
+          <td id="negativeScore"><input type="number" id="2Chaba-" placeholder="0"></td>
+          <td id="positiveScore"><input type="number" id="2Dd+" placeholder="0"></td>
+          <td id="negativeScore"><input type="number" id="2Dd-" placeholder="0"></td>
+          <th><div id="check2">-</div></th>
+        </tr>
+        <tr>
+          <th>3</th>
+          <td id="positiveScore"><input type="number" id="3Akagi+" placeholder="0"></td>
+          <td id="negativeScore"><input type="number" id="3Akagi-" placeholder="0"></td>
+          <td id="positiveScore"><input type="number" id="3Boshu+" placeholder="0"></td>
+          <td id="negativeScore"><input type="number" id="3Boshu-" placeholder="0"></td>
+          <td id="positiveScore"><input type="number" id="3Chaba+" placeholder="0"></td>
+          <td id="negativeScore"><input type="number" id="3Chaba-" placeholder="0"></td>
+          <td id="positiveScore"><input type="number" id="3Dd+" placeholder="0"></td>
+          <td id="negativeScore"><input type="number" id="3Dd-" placeholder="0"></td>
+          <th><div id="check3">-</div></th>
+        </tr>
+        <tr>
+          <th>4</th>
+          <td id="positiveScore"><input type="number" id="4Akagi+" placeholder="0"></td>
+          <td id="negativeScore"><input type="number" id="4Akagi-" placeholder="0"></td>
+          <td id="positiveScore"><input type="number" id="4Boshu+" placeholder="0"></td>
+          <td id="negativeScore"><input type="number" id="4Boshu-" placeholder="0"></td>
+          <td id="positiveScore"><input type="number" id="4Chaba+" placeholder="0"></td>
+          <td id="negativeScore"><input type="number" id="4Chaba-" placeholder="0"></td>
+          <td id="positiveScore"><input type="number" id="4Dd+" placeholder="0"></td>
+          <td id="negativeScore"><input type="number" id="4Dd-" placeholder="0"></td>
+          <th><div id="check4">-</div></th>
+        </tr>
+        <tr>
+          <th>5</th>
+          <td id="positiveScore"><input type="number" id="5Akagi+" placeholder="0"></td>
+          <td id="negativeScore"><input type="number" id="5Akagi-" placeholder="0"></td>
+          <td id="positiveScore"><input type="number" id="5Boshu+" placeholder="0"></td>
+          <td id="negativeScore"><input type="number" id="5Boshu-" placeholder="0"></td>
+          <td id="positiveScore"><input type="number" id="5Chaba+" placeholder="0"></td>
+          <td id="negativeScore"><input type="number" id="5Chaba-" placeholder="0"></td>
+          <td id="positiveScore"><input type="number" id="5Dd+" placeholder="0"></td>
+          <td id="negativeScore"><input type="number" id="5Dd-" placeholder="0"></td>
+          <th><div id="check5">-</div></th>
+        </tr>
+      </tbody>
 
       <!--total-->
-      <tr>
-        <th>total</th>
-        <th id="positiveFooter"><div id="sumAkagi+">0</div></th>
-        <th id="negativeFooter"><div id="sumAkagi-">0</div></th>
-        <th id="positiveFooter"><div id="sumBoshu+">0</div></th>
-        <th id="negativeFooter"><div id="sumBoshu-">0</div></th>
-        <th id="positiveFooter"><div id="sumChaba+">0</div></th>
-        <th id="negativeFooter"><div id="sumChaba-">0</div></th>
-        <th id="positiveFooter"><div id="sumDd+">0</div></th>
-        <th id="negativeFooter"><div id="sumDd-">0</div></th>
-        <th><div id="checkSum">-</div></th>
-      </tr>
+      <tfoot>
+        <tr>
+          <th>total</th>
+          <th id="positiveFooter"><div id="sumAkagi+">0</div></th>
+          <th id="negativeFooter"><div id="sumAkagi-">0</div></th>
+          <th id="positiveFooter"><div id="sumBoshu+">0</div></th>
+          <th id="negativeFooter"><div id="sumBoshu-">0</div></th>
+          <th id="positiveFooter"><div id="sumChaba+">0</div></th>
+          <th id="negativeFooter"><div id="sumChaba-">0</div></th>
+          <th id="positiveFooter"><div id="sumDd+">0</div></th>
+          <th id="negativeFooter"><div id="sumDd-">0</div></th>
+          <th><div id="checkSum">-</div></th>
+        </tr>
 
-      <!--rating-->
-      <tr>
-        <th>30yen</th>
-        <th colspan="2"><div id="30Akagi">0</div></th>
-        <th colspan="2"><div id="30Boshu">0</div></th>
-        <th colspan="2"><div id="30Chaba">0</div></th>
-        <th colspan="2"><div id="30Dd">0</div></th>
-        <th><div id="check30">-</div></th>
-      </tr>
-      <tr>
-        <th>50yen</th>
-        <th colspan="2"><div id="50Akagi">0</div></th>
-        <th colspan="2"><div id="50Boshu">0</div></th>
-        <th colspan="2"><div id="50Chaba">0</div></th>
-        <th colspan="2"><div id="50Dd">0</div></th>
-        <th><div id="check50">-</div></th>
-      </tr>
-
+        <!--rating-->
+        <tr>
+          <th>30yen</th>
+          <th colspan="2"><div id="30Akagi">0</div></th>
+          <th colspan="2"><div id="30Boshu">0</div></th>
+          <th colspan="2"><div id="30Chaba">0</div></th>
+          <th colspan="2"><div id="30Dd">0</div></th>
+          <th><div id="check30">-</div></th>
+        </tr>
+        <tr>
+          <th>50yen</th>
+          <th colspan="2"><div id="50Akagi">0</div></th>
+          <th colspan="2"><div id="50Boshu">0</div></th>
+          <th colspan="2"><div id="50Chaba">0</div></th>
+          <th colspan="2"><div id="50Dd">0</div></th>
+          <th><div id="check50">-</div></th>
+        </tr>
+      </tfoot>
     </table>
 
     <!--calculate button-->
     <form onclick="calcMain()">
       <p>
         <a class="waves-effect waves-light btn" button type="button">
-          <!-- <button type="button">calculate</button> -->
           <button type="button"></button>calculate</button>
         </a>
       </p>
