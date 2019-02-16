@@ -12,6 +12,23 @@ td {
 	border: solid 1px;
 }
 
+th[id="positive"] {
+	background-color: rgb(217, 249, 250);
+}
+
+th[id="negative"] {
+	background-color: rgb(250, 217, 233);
+}
+
+td[id="positive"] {
+	background-color: rgb(217, 249, 250);
+}
+
+td[id="negative"] {
+	background-color: rgb(250, 217, 233);
+}
+
+
 input[type="number"] {
 	width: 5em;
 }
@@ -20,18 +37,3 @@ input[type="text"] {
 	width: 5em;
 }
 
-th[id="positiveHeader"] {
-	background-color: aqua;
-}
-
-th[id="negativeHeader"] {
-	background-color: salmon;
-}
-
-th[id="positiveFooter"] {
-	background-color: aqua;
-}
-
-th[id="negativeFooter"] {
-	background-color: salmon;
-}
