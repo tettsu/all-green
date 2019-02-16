@@ -28,6 +28,9 @@ td[id="negative"] {
 	background-color: rgb(250, 217, 233);
 }
 
+th[id*="check"] {
+	background-color:#DDDDDD;
+}
 
 input[type="number"] {
 	width: 5em;
