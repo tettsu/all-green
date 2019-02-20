@@ -13,7 +13,7 @@ td {
 }
 
 th[id="positive"] {
-	background-color: rgb(250, 217, 233);
+	background-color: rgb(217, 249, 250);
 }
 
 th[id="negative"] {
@@ -21,7 +21,7 @@ th[id="negative"] {
 }
 
 td[id="positive"] {
-	background-color: rgb(250, 217, 233);
+	background-color: rgb(217, 249, 250);
 }
 
 td[id="negative"] {
