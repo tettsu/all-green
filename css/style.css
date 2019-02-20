@@ -13,7 +13,7 @@ td {
 }
 
 th[id="positive"] {
-	background-color: rgb(217, 249, 250);
+	background-color: rgb(250, 217, 233);
 }
 
 th[id="negative"] {
@@ -21,7 +21,7 @@ th[id="negative"] {
 }
 
 td[id="positive"] {
-	background-color: rgb(217, 249, 250);
+	background-color: rgb(250, 217, 233);
 }
 
 td[id="negative"] {
@@ -31,6 +31,11 @@ td[id="negative"] {
 th[id*="check"] {
 	background-color:#DDDDDD;
 }
+
+
+
+
+
 
 input[type="number"] {
 	width: 5em;
